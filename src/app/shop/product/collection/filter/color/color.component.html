@@ -1,0 +1,14 @@
+<p>color works!</p>
+<div class="collection-collapse-block open">
+    <h3 class="collapse-block-title">colors</h3>
+    <div class="collection-collapse-block-content">
+        <div class="color-selector">
+            <ul>
+                <li *ngFor="let filter of colorsFilters" [ngClass]="filter.color"
+                    [class.active]="activeItem == filter.color"
+                    (click)="changeColor(activeItem == filter.color? {} : filter)">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
